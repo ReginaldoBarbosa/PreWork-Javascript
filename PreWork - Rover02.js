@@ -98,7 +98,7 @@ function switchsPositive (axis, maxValue) {
     }
   }
 }
-  // Teste de comentario
+  // Teste de comentar
 
 
 
