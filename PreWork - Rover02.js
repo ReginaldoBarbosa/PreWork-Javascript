@@ -72,9 +72,37 @@ function switchsNegative (axis, maxValue) {
     }
   }
 }
+
+function switchsPositive (axis, maxValue) {
+  for(let i = 1; i < howManySteps; i++) {
+    if (howManySteps > 0) {
+      switch (true) {
+        case rover.x == rockOne.x && rover.y == rockOne.y:
+          console.log('you found a stone! Turn around!');
+          rover.axis--
+          break;
+        case rover.x == otherRover.x && rover.y == otherRover.y:
+          console.log('you found another rover! Turn around!');
+          rover.axis--
+          break;
+        case rover.axis < maxValue:
+          rover.axis++
+          break;
+        case rover.axis >= maxValue:
+          console.log("ALERT: YOU SHALL NOT PASS");
+          i = howManySteps;
+          break;
+      }
+    } else {
+      console.log("ERROR: Insert a positive value!");
+    }
+  }
+}
+  // Teste de comentario
+
+
+
 switchsNegative (y,0);
-
-
 
 function turnLeft(rover, howManySteps){
   if(rover.direction === allDirections[0]) {
